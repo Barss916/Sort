@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,9 +6,28 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/sing-in.css'%}">
+    <title>Главная</title>
 </head>
 <body>
-<h1>Регистарция</h1>
+
+    <main class="form-signin w-100 m-auto">
+        <form style="margin-top: 150px;">
+            <h1 class="h3 mb-3 fw-normal">Вход</h1>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Почта</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Пароль</label>
+            </div>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="btn btn-primary me-2" > Войти</a></li>
+            </ul>
+        </form>
+    </main>
 </body>
 </html>
