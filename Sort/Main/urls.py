@@ -7,6 +7,7 @@ app_name = "main"
 
 urlpatterns = [
     path('', Index.as_view(), name='index'),
-    path('categories/', categories, name='categories')
+    path('categories/', categories, name='categories'),
+    path('filter/', Filtering.as_view(), name='filter'),
 ]
 
