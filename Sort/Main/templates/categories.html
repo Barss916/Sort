@@ -27,12 +27,12 @@
             <li><a href="/" class="nav-link px-2 link-secondary">Главаня</a></li>
             <li><a href="#" class="nav-link px-2">Сраванение</a></li>
             <li><a href="categories/" class="nav-link px-2">Категории</a></li>
-            <li><a href="admin/" class="nav-link px-2 link-danger">Admin</a></li>
+            <li><a href="/admin/" class="nav-link px-2 link-danger">Admin</a></li>
         </ul>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <li><a href="reg/" class="btn btn-primary">Sign-up</a></li>
+            <li><a href="/reg/" class="btn btn-primary">Sign-up</a></li>
         </ul>
     </header>
 </div>
@@ -48,22 +48,33 @@
             <div class="product-item">
                 <img src="{% static 'image/samsung.jpg' %}">
                 <div class="product-buttons">
-                    <a href="" class="button">Перейти</a>
+                    <a href="/filter/?category=1" class="button">Перейти</a>
                 </div>
             </div>
             <div class="product-title">
-                <a href="">Телефоны</a>
+                <a href="/filter/?category=1">Телефоны</a>
             </div>
         </div>
         <div class="product-wrap">
             <div class="product-item">
                 <img height="300" src="{% static 'image/laptop.jpg' %}">
                 <div class="product-buttons">
-                    <a href="" class="button">Перейти</a>
+                    <a href="/filter/?category=2" class="button">Перейти</a>
                 </div>
             </div>
             <div class="product-title">
-                <a href="">Нойтбуки, планшеты и компьютеры</a>
+                <a href="/filter/?category=2">Нойтбуки</a>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product-item">
+                <img height="300" src="{% static 'image/tablet.jpg' %}">
+                <div class="product-buttons">
+                    <a href="/filter/?category=3" class="button">Перейти</a>
+                </div>
+            </div>
+            <div class="product-title">
+                <a href="/filter/?category=33">Планшеты</a>
             </div>
         </div>
     </div>
