@@ -9,5 +9,7 @@ urlpatterns = [
     path('', Index.as_view(), name='index'),
     path('categories/', categories, name='categories'),
     path('filter/', Filtering.as_view(), name='filter'),
+    path('filter/cheaper', FilteringLower.as_view(), name='filter_lower'),
+    path('filter/expensive', FilteringHigher.as_view(), name='filter_lower'),
 ]
 
