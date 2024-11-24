@@ -6,7 +6,7 @@ from .views import *
 app_name = "main"
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('', Index.as_view(), name='index'),
     path('categories/', categories, name='categories')
 ]
 
