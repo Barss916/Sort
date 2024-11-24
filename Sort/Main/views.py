@@ -23,10 +23,14 @@ class Filtering(ListAPIView):
 class FilteringLower(ListAPIView):
     queryset = Product.objects.all().order_by("price")
     serializer_class = ProductSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ["category", ]
 
 class FilteringHigher(ListAPIView):
     queryset = Product.objects.all().order_by("-price")
     serializer_class = ProductSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ["category", ]
 
 class Index(GenericAPIView):
     serializer_class = ProductSerializer
