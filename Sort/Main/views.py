@@ -5,6 +5,8 @@ from Parsing.models import *
 from Parsing.serializers import *
 import django_filters.rest_framework
 from rest_framework import filters
+# from django_filters.rest_framework.backends import filterset_class
+import webbrowser
 
 
 # Create your views here.
@@ -21,6 +23,12 @@ class Filtering(ListAPIView):
     filterset_fields = ["category", ]
     search_fields = ["name", ]
 
+    # def get(self, request):
+    #     index = ProductSerializer(self.get_queryset(), many=True)
+    #     context = {
+    #         "object_list": index.data,
+    #     }
+    #     return render(request, 'index.html', context=context)
 
 class FilteringLower(ListAPIView):
     queryset = Product.objects.all().order_by("price")
@@ -58,3 +66,4 @@ class Product(ListAPIView):
             "object_list": index.data,
         }
         return render(request, 'product.html', context=context)
+
