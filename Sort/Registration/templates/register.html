@@ -13,7 +13,8 @@
 <body>
 
     <main class="form-signin w-100 m-auto">
-        <form style="margin-top: 150px;">
+        <form method="POST" style="margin-top: 150px;">
+            {% csrf_token %}
             <h1 class="h3 mb-3 fw-normal">Вход</h1>
 
             <div class="form-floating">
